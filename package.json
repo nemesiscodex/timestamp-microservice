@@ -3,16 +3,21 @@
   "version": "1.0.1",
   "description": "Timestamp microservice",
   "main": "server.js",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemesiscodex/timestamp-microservice.git"
+  },
   "keywords": [
     "Express",
     "Node",
-    "javascript",
+    "javascript"
   ],
   "scripts": {
   "start": "node server.js"
   },
   "dependencies": {
     "dotenv": "^1.2.0",
-    "express": "^4.12.4",
+    "express": "^4.12.4"
   }
 }
