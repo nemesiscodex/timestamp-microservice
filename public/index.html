@@ -2,11 +2,50 @@
 
 <html>
 
-	<head>
-		<title>Microservice.</title>
-	</head>
-	<body>
-		testing
-	</body>
+<head>
+	<title>Microservice.</title>
+</head>
+
+<body>
+	<h1>API Basejump: Timestamp microservice</h1>
+	<blockquote>
+		User stories:
+		<ul>1) I can pass a string as a parameter, and it will check to see
+			whether that string contains either a unix timestamp or a natural
+			 language date (example: January 1, 2016)</ul>
+		<ul>2) If it does, it returns both the Unix timestamp and the natural
+			language form of that date.</ul>
+		<ul>3) If it does not contain a date or Unix timestamp, it returns null
+			for those properties.</ul>
+	</blockquote>
+	<h3>Example usage:</h3>
+	<ul>
+		<li>
+			<code><a href="/December 15, 2016">
+				<span class="url"></span>/December 17, 2016</a></code>
+		</li>
+		<li>
+			<code><a href="/1481770800000">
+				<span class="url"></span>/1481770800000</a></code>
+		</li>
+	</ul>
+
+	<h3>Example output:</h3>
+	<ul>
+		<li>
+			<code>{"unix":1481770800000,"natural":"December 15, 2016"}</code>
+		</li>
+	</ul>
+	<script>
+		window.onload = function() {
+			var url = window.location.origin;
+			var change = document.getElementsByClassName('url');
+			for (var i = 0; i < change.length; i++) {
+				console.log(change[i]);
+				change[i].innerHTML = url;
+			}
+		}
+	</script>
+</body>
 
 </html>
